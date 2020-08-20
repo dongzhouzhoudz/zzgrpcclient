@@ -1,0 +1,26 @@
+{
+    "name": "zzgrpcclient/dong",
+    "description": "This Grpc Client Is For User To Call Rpc Function",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dong Zhou",
+            "email": "dongzhou.southeast@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ZZGrpcClient\\": "zzgrpc/",
+            "GPBMetadata\\":"zzgrpc/GPBMetadata/",
+            "GrpServiceProto\\":"zzgrpc/GrpServiceProto/",
+            "GrpServiceClient\\":"zzgrpc/GService/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.2",
+        "google/protobuf": "v3.12.2",
+        "grpc/grpc": "^1.30"
+    }
+}

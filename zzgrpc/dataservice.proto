@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "app.zz.grpc";
+option java_outer_classname = "GrpServiceProto";
+option objc_class_prefix = "ZZRPC";
+
+package GrpServiceProto;
+
+
+service GrpServiceProto {
+    rpc CallService (ServiceRequest) returns (ServiceResponse) {}
+}
+
+
+message ServiceRequest {
+    string serviceName = 1;
+    string methodName = 2;
+    string paramsJson = 3;
+}
+
+
+message ServiceResponse {
+    int32 code = 1;
+    string message = 2;
+    string resultJson = 3;
+}
